@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "name": "Unresolved buffet draft",
+  "date": "2026-08-16",
+  "revision": "draft-risk-review",
+  "profile": "us",
+  "custom_allergens": [],
+  "resources": [
+    {
+      "id": "board-a",
+      "name": "Shared preparation board",
+      "kind": "surface",
+      "cleanable": true,
+      "dedicated_to": null
+    },
+    {
+      "id": "tongs-a",
+      "name": "Shared buffet tongs",
+      "kind": "service",
+      "cleanable": true,
+      "dedicated_to": null
+    }
+  ],
+  "dishes": [
+    {
+      "id": "sesame-noodles",
+      "name": "Sesame noodles",
+      "ingredients": [
+        {
+          "name": "Wheat noodles",
+          "contains": [
+            "wheat"
+          ],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Current package label checked 2026-07-29"
+        },
+        {
+          "name": "Sesame dressing",
+          "contains": [
+            "sesame",
+            "soy"
+          ],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Current bottle label checked 2026-07-29"
+        }
+      ],
+      "diet_tags": [
+        "vegan",
+        "vegetarian"
+      ],
+      "free_from": [],
+      "prep_resources": [
+        "board-a"
+      ],
+      "service_resources": [
+        "tongs-a"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fruit-cup",
+      "name": "Fresh fruit cup",
+      "ingredients": [
+        {
+          "name": "Cut fruit",
+          "contains": [],
+          "may_contain": [],
+          "verified": false,
+          "evidence": ""
+        }
+      ],
+      "diet_tags": [
+        "vegan",
+        "vegetarian"
+      ],
+      "free_from": [
+        "sesame"
+      ],
+      "prep_resources": [
+        "board-a"
+      ],
+      "service_resources": [
+        "tongs-a"
+      ],
+      "notes": "Unsafe draft: the board is reused without a cleaning boundary."
+    }
+  ],
+  "preparation": [
+    {
+      "order": 1,
+      "dish": "sesame-noodles",
+      "clean_before": [
+        "board-a"
+      ],
+      "note": ""
+    },
+    {
+      "order": 2,
+      "dish": "fruit-cup",
+      "clean_before": [],
+      "note": "No cleaning boundary was recorded."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allergengrid"
+version = "0.1.0"
+description = "Offline event allergen matrix and cross-contact planner"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "KanadeK", email = "121669563+KanadeK@users.noreply.github.com" },
+]
+keywords = [
+  "allergen",
+  "catering",
+  "cross-contact",
+  "event-planning",
+  "food-allergy",
+  "food-safety",
+  "local-first",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.3,<2",
+  "coverage[toml]>=7.8,<8",
+  "mypy>=1.17,<2",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+allergengrid = "allergengrid.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/KanadeK/allergengrid"
+Issues = "https://github.com/KanadeK/allergengrid/issues"
+Releases = "https://github.com/KanadeK/allergengrid/releases"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+allergengrid = ["py.typed"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["dist", "build"]
+
+[tool.ruff.lint]
+select = ["B", "C4", "E", "F", "I", "RUF", "SIM", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["S101"]
+"src/allergengrid/reports.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src", "scripts"]
+exclude = ["build", "dist"]
+
+[tool.coverage.run]
+branch = true
+source = ["allergengrid"]
+omit = ["*/__main__.py"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = true
+exclude_also = [
+  "if TYPE_CHECKING:",
+  "if __name__ == .__main__.:",
+  "raise AssertionError",
+]

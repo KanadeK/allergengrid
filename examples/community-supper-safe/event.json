@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "name": "Riverside community supper",
+  "date": "2026-08-15",
+  "revision": "approved-menu-3",
+  "profile": "us",
+  "custom_allergens": [],
+  "resources": [
+    {
+      "id": "board-rice",
+      "name": "Blue rice board",
+      "kind": "surface",
+      "cleanable": true,
+      "dedicated_to": "herb-rice"
+    },
+    {
+      "id": "pot-rice",
+      "name": "Rice pot",
+      "kind": "appliance",
+      "cleanable": true,
+      "dedicated_to": "herb-rice"
+    },
+    {
+      "id": "spoon-rice",
+      "name": "Blue rice serving spoon",
+      "kind": "service",
+      "cleanable": true,
+      "dedicated_to": "herb-rice"
+    },
+    {
+      "id": "board-stew",
+      "name": "Green stew board",
+      "kind": "surface",
+      "cleanable": true,
+      "dedicated_to": "lentil-stew"
+    },
+    {
+      "id": "pot-stew",
+      "name": "Stew pot",
+      "kind": "appliance",
+      "cleanable": true,
+      "dedicated_to": "lentil-stew"
+    },
+    {
+      "id": "ladle-stew",
+      "name": "Green stew ladle",
+      "kind": "service",
+      "cleanable": true,
+      "dedicated_to": "lentil-stew"
+    },
+    {
+      "id": "bowl-yogurt",
+      "name": "White yogurt bowl",
+      "kind": "utensil",
+      "cleanable": true,
+      "dedicated_to": "yogurt-dip"
+    },
+    {
+      "id": "spoon-yogurt",
+      "name": "White yogurt serving spoon",
+      "kind": "service",
+      "cleanable": true,
+      "dedicated_to": "yogurt-dip"
+    }
+  ],
+  "dishes": [
+    {
+      "id": "herb-rice",
+      "name": "Lemon herb rice",
+      "ingredients": [
+        {
+          "name": "Long-grain rice",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Sealed package label photographed and checked 2026-07-29"
+        },
+        {
+          "name": "Lemon and fresh herbs",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Whole produce and written recipe checked 2026-07-29"
+        },
+        {
+          "name": "Olive oil",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Current bottle label checked 2026-07-29"
+        }
+      ],
+      "diet_tags": [
+        "vegan",
+        "vegetarian"
+      ],
+      "free_from": [],
+      "prep_resources": [
+        "board-rice",
+        "pot-rice"
+      ],
+      "service_resources": [
+        "spoon-rice"
+      ],
+      "notes": "Keep covered in the blue service zone."
+    },
+    {
+      "id": "lentil-stew",
+      "name": "Tomato lentil stew",
+      "ingredients": [
+        {
+          "name": "Dry red lentils",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Current package label checked 2026-07-29"
+        },
+        {
+          "name": "Canned tomatoes",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Current can label checked 2026-07-29"
+        },
+        {
+          "name": "Vegetables and spices",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Whole produce and each spice label checked 2026-07-29"
+        }
+      ],
+      "diet_tags": [
+        "vegan",
+        "vegetarian"
+      ],
+      "free_from": [],
+      "prep_resources": [
+        "board-stew",
+        "pot-stew"
+      ],
+      "service_resources": [
+        "ladle-stew"
+      ],
+      "notes": "Keep in the green service zone."
+    },
+    {
+      "id": "yogurt-dip",
+      "name": "Cucumber yogurt dip",
+      "ingredients": [
+        {
+          "name": "Plain yogurt",
+          "contains": [
+            "milk"
+          ],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Current tub label checked 2026-07-29"
+        },
+        {
+          "name": "Cucumber and herbs",
+          "contains": [],
+          "may_contain": [],
+          "verified": true,
+          "evidence": "Whole produce and written recipe checked 2026-07-29"
+        }
+      ],
+      "diet_tags": [
+        "vegetarian"
+      ],
+      "free_from": [],
+      "prep_resources": [
+        "bowl-yogurt"
+      ],
+      "service_resources": [
+        "spoon-yogurt"
+      ],
+      "notes": "Keep in the white dairy service zone."
+    }
+  ],
+  "preparation": [
+    {
+      "order": 1,
+      "dish": "herb-rice",
+      "clean_before": [
+        "board-rice",
+        "pot-rice"
+      ],
+      "note": "Prepare in the blue zone."
+    },
+    {
+      "order": 2,
+      "dish": "lentil-stew",
+      "clean_before": [
+        "board-stew",
+        "pot-stew"
+      ],
+      "note": "Prepare in the green zone."
+    },
+    {
+      "order": 3,
+      "dish": "yogurt-dip",
+      "clean_before": [
+        "bowl-yogurt"
+      ],
+      "note": "Prepare last in the white dairy zone."
+    }
+  ]
+}

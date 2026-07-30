@@ -1,0 +1,45 @@
+name: Bug report
+description: Report incorrect behavior or a safety-relevant finding.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove names and contact details from sample files. If the report is a
+        private vulnerability, use the process in SECURITY.md instead.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Include the command, exit code, and finding codes.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Attach only sanitized event.json and guests.csv data.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: AllergenGrid and Python versions
+      placeholder: AllergenGrid 0.1.0; Python 3.12
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed personal and sensitive data.
+          required: true

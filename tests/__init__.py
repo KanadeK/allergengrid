@@ -1,0 +1,1 @@
+"""AllergenGrid test suite."""

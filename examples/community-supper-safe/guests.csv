@@ -1,0 +1,4 @@
+guest_id,name,avoid_allergens,required_diets,notes
+maya,Maya,peanut,vegan,Confirm preferences on arrival
+leo,Leo,milk,,Milk allergy declared on RSVP
+sam,Sam,sesame,,Carries prescribed emergency medication

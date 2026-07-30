@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose an auditable extension to AllergenGrid.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Event-planning problem
+      description: Describe the concrete workflow that is not covered today.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Explicit source data
+      description: What declared input would drive the feature without guessing?
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Conservative failure behavior
+      description: How should unknown or conflicting data stop or hold the workflow?
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Useful output
+      description: Describe the report, label, or package an organizer needs.
+    validations:
+      required: true

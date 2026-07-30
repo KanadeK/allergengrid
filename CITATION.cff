@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If AllergenGrid supports your work, please cite this software."
+title: "AllergenGrid"
+version: 0.1.0
+date-released: 2026-07-30
+authors:
+  - family-names: "KanadeK"
+repository-code: "https://github.com/KanadeK/allergengrid"
+url: "https://github.com/KanadeK/allergengrid"
+license: MIT
