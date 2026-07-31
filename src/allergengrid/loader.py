@@ -82,7 +82,7 @@ def _require_bool(value: Any, path: str) -> bool:
 def _require_int(value: Any, path: str) -> int:
     if isinstance(value, bool) or not isinstance(value, int):
         _fail(path, "expected an integer")
-    return value
+    return int(value)
 
 
 def _unique(values: Iterable[str], path: str) -> tuple[str, ...]:
